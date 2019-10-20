@@ -1,0 +1,14 @@
+{
+  "name": "kevo-timeout",
+  "version": "0.0.1",
+  "description": "Times out kevo, and only kevo.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "korisya",
+  "dependencies": {
+    "config": "^3.2.3",
+    "discord.js": "^11.5.1"
+  }
+}
