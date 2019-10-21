@@ -28,7 +28,7 @@ client.on('message', message => {
 
     const isAdmin = adminIDs.includes(message.author.id);
 
-    if (cmd === 'timeout') {
+    if (isAdmin && cmd === 'timeout') {
       timeout = !timeout;
       console.info('TImeout is ' + timeout);
     }
