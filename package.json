@@ -1,10 +1,10 @@
 {
   "name": "kevo-timeout",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Times out kevo, and only kevo.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "build": "node index.js"
   },
   "author": "korisya",
   "dependencies": {

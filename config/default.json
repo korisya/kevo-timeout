@@ -1,7 +1,8 @@
 {
   "discordBotToken": "",
-  "refreshIntervalMs": 500,
   "adminIDs": [
+    "",
+    "",
     ""
   ],
   "kevoID": "",

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "build": {
+    "env": {
+      "TOKEN": "@token",
+      "ADMIN_IDS": "@admins",
+      "KEVO_ID": "@kevo",
+      "GUILD_ID": "@guild",
+      "ROLE_ID": "@role"
+    }
+  }
+}

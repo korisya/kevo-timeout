@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const config = require('config');
 
-const adminIDs = config.get(`adminIDs`);
-const KEVO_ID = config.get(`kevoID`);
-const GUILD_ID = config.get(`guildID`);
-const ROLE_ID = config.get('roleID');
+const adminIDs = process.env.ADMIN_IDS.split(' ') || config.get(`adminIDs`);
+const KEVO_ID =  process.env.KEVO_ID || config.get(`kevoID`);
+const GUILD_ID = process.env.GUILD_ID || config.get(`guildID`) ;
+const ROLE_ID =  process.env.ROLE_ID || config.get('roleID');
 let timeout = false;
 
-const REFRESH_INTERVAL = config.get(`refreshIntervalMs`);
+const REFRESH_INTERVAL = 500;
 
 // Initialize Discord Bot
 var client = new Discord.Client();
@@ -56,7 +56,7 @@ function kevoCheck() {
   setTimeout(kevoCheck, REFRESH_INTERVAL);
 }
 
-const DISCORD_BOT_TOKEN = config.get('discordBotToken');
+const DISCORD_BOT_TOKEN = process.env.TOKEN || config.get('discordBotToken');
 if (!DISCORD_BOT_TOKEN) {
   console.error('Missing discordBotToken config key.');
   process.exit();
